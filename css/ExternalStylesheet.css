@@ -1,0 +1,165 @@
+/* General body styles */
+body {
+    font-family: 'Inter', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F8F9FA;
+    color: #212529;
+    line-height: 1.6;
+}
+
+/* header layout */
+header {
+    background-color: #FFFFFF;
+    padding: 1rem 2rem;
+    border-bottom: 2px solid #ff5500;
+
+    position: relative;
+    overflow: auto;   
+    z-index: 100;        /* works with the z-index demo box */
+}
+
+/* header title */
+header h1 {
+    color: #ff5500;   /* primary color */
+    margin: 0;
+    font-size: 1.5rem;
+    float: left;
+}
+
+/* navigation positioned to the right */
+nav {
+    float: right;
+}
+
+/* navigation links */
+nav a {
+    text-decoration: none;
+    color: #495057;
+    padding: 0.5rem 1rem;
+    margin-left: 0.5rem;
+
+    border: 1px solid transparent;
+}
+
+/* hover + active state using */
+nav a:hover,
+nav a.active {
+    background-color: #ff5500;
+    color: #FFFFFF;
+    border: 1px solid #ff5500;
+    border-radius: 20px;
+}
+
+/* main content area */
+main {
+    padding: 1rem 2rem;
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #495057;
+    color: #FFFFFF;
+    margin-top: 2rem;
+    border-top: 1px solid #E9ECEF;
+}
+
+/* card component (used on other pages) */
+.card {
+    background-color: #FFFFFF;
+    padding: 2rem;
+    border-radius: 12px; /* rounded corners */
+    border: 1px solid #DEE2E6;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+                0 4px 6px -2px rgba(0, 0, 0, 0.05); /* box-shadow */
+    width: 650px;
+    margin: 2rem auto;
+}
+
+/* primary buttons and submit buttons */
+.btn-primary,
+button[type="submit"] {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ff5500; /* primary */
+    color: #FFFFFF;
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 4px 6px rgba(0, 123, 255, 0.3);
+}
+
+.btn-primary:hover,
+button[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 123, 255, 0.5);
+}
+
+/* form labels */
+form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+/* form inputs */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.5rem;
+    background-color: #F1F3F5;
+    color: #212529;
+    border: 1px solid #CED4DA;
+    border-radius: 6px;
+}
+
+/* section images (general) */
+section img {
+    width: 20%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    border-radius: 4px;
+    
+}
+
+/* tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+th,
+td {
+    border: 1px solid #DEE2E6;
+    padding: 0.75rem;
+    text-align: left;
+    background-color: #FFFFFF;
+}
+
+th {
+    background-color: #0042f6; /* secondary color */
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+/* lists */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    background: #FFFFFF;
+    padding: 0.75rem;
+    margin-bottom: 0.5rem;
+    border-left: 4px solid #ff5500;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
