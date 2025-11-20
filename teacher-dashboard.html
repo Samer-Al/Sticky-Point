@@ -3,6 +3,20 @@
 <head>
   <title>Sticky Points | Teacher Dashboard</title>
   <link rel="stylesheet" href="css/ExternalStylesheet.css">
+
+  <script>
+    function toggleTheme() {
+
+      if (document.body.classList.contains("dark")) {
+          document.body.classList.remove("dark");
+      } 
+      else {
+          document.body.classList.add("dark");
+      }
+
+    }
+
+  </script>
 </head>
 
 <body>
@@ -14,6 +28,11 @@
       <a href="teacher-dashboard.html">Dashboard</a>
       <a href="create-group.html">Create Group</a>
       <a href="about.html">About</a>
+      <div id="themeToggle" onclick="toggleTheme()" class="toggle-switch">
+      <div class="toggle-circle"></div>
+      <span class="icon-sun">☀</span>
+      <span class="icon-moon">🌙</span>
+      </div>
     </nav>
   </header>
 

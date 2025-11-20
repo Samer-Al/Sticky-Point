@@ -3,6 +3,20 @@
 <head>
   <title>Sticky Points | About Us</title>
   <link rel="stylesheet" href="css/ExternalStylesheet.css">
+
+  <script>
+    function toggleTheme() {
+
+      if (document.body.classList.contains("dark")) {
+          document.body.classList.remove("dark");
+      } 
+      else {
+          document.body.classList.add("dark");
+      }
+
+    }
+
+  </script>
 </head>
 
 <body>
@@ -14,6 +28,11 @@
       <a href="login.html">Login</a>
       <a href="signup.html">Sign Up</a>
       <a href="about.html">About Us</a>
+      <div id="themeToggle" onclick="toggleTheme()" class="toggle-switch">
+      <div class="toggle-circle"></div>
+      <span class="icon-sun">☀</span>
+      <span class="icon-moon">🌙</span>
+      </div>
     </nav>
   </header>
 

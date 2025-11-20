@@ -25,13 +25,27 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     }
   </style>
+
+  <script>
+
+    function toggleTheme() {
+
+      if (document.body.classList.contains("dark")) {
+          document.body.classList.remove("dark");
+      } 
+      else {
+          document.body.classList.add("dark");
+      }
+
+    }
+
+  </script>
 </head>
 
 <body>
 
   <header>
     <h1>Sticky Points</h1>
-    <div class="z-index-demo-box">New Features coming soon</div>
     <nav>
       <a href="index.html">Home</a>
       <a href="login.html">Login</a>
@@ -39,6 +53,11 @@
       <a href="teacher-dashboard.html">Teacher Daschboard</a>
       <a href="student-join.html">Student Join</a>
       <a href="about.html">About Us</a>
+      <div id="themeToggle" onclick="toggleTheme()" class="toggle-switch">
+      <div class="toggle-circle"></div>
+      <span class="icon-sun">☀</span>
+      <span class="icon-moon">🌙</span>
+      </div>
     </nav>
   </header>
 

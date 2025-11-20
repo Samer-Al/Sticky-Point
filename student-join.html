@@ -3,6 +3,20 @@
 <head>
   <title>Sticky Points | Student Join</title>
   <link rel="stylesheet" href="css/ExternalStylesheet.css">
+
+  <script>
+    function toggleTheme() {
+
+      if (document.body.classList.contains("dark")) {
+          document.body.classList.remove("dark");
+      } 
+      else {
+          document.body.classList.add("dark");
+      }
+
+    }
+
+  </script>
 </head>
 
 <body>
@@ -14,6 +28,11 @@
       <a href="teacher-dashboard.html">Teacher Dashboard</a>
       <a href="about.html">About</a>
       <a href="student-join.html" class="active">Student Join</a>
+      <div class="toggle-circle"></div>
+      <span class="icon-sun">☀</span>
+      <span class="icon-moon">🌙</span>
+      </div>
+    </nav>
     </nav>
   </header>
 
