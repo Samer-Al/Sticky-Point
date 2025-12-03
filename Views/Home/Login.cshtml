@@ -1,0 +1,24 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="card">
+    <h2>Login to Sticky Points</h2>
+
+    <form method="post" asp-controller="Home" asp-action="Login">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your registered email" required />
+
+        <button type="submit">Login</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(ViewBag.LoginSuccess as string))
+    {
+        <p style="color: green;">@ViewBag.LoginSuccess</p>
+    }
+
+    @if (!string.IsNullOrEmpty(ViewBag.LoginError as string))
+    {
+        <p style="color: red;">@ViewBag.LoginError</p>
+    }
+</section>

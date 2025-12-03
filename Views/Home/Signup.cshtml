@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Signup";
+}
+
+<section class="card">
+    <h2>Create Your Account</h2>
+
+    <!-- IMPORTANT: method + asp-controller + asp-action -->
+    <form method="post" asp-controller="Home" asp-action="Signup">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="5" max="100" required />
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    @if (!string.IsNullOrEmpty(ViewBag.SignupMessage as string))
+    {
+        <p style="color: green;">@ViewBag.SignupMessage</p>
+    }
+
+    @if (!string.IsNullOrEmpty(ViewBag.SignupError as string))
+    {
+        <p style="color: red;">@ViewBag.SignupError</p>
+    }
+</section>

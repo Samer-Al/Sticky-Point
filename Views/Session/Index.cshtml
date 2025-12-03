@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Session Page";
+}
+
+<h2>Session Values</h2>
+
+<p><strong>Email:</strong> @ViewBag.Email</p>
+<p><strong>Page:</strong> @ViewBag.Page</p>
+
+<br />
+
+<a asp-controller="Session" asp-action="SetSession" class="btn btn-primary">Set Session</a>
+<a asp-controller="Session" asp-action="ClearSession" class="btn btn-danger">Clear Session</a>

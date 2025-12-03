@@ -1,0 +1,22 @@
+﻿@model IEnumerable<StickyPointsMVC.Models.Student>
+
+<h2>Teacher Dashboard</h2>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+        <th>Points</th>
+    </tr>
+
+    @foreach (var student in Model)
+    {
+        <tr>
+            <td>@student.Name</td>
+            <td>@student.Age</td>
+            <td>@student.Email</td>
+            <td>@student.Points</td>
+        </tr>
+    }
+</table>

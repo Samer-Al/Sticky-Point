@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - StickyPointsMVC</title>
+
+    <link rel="stylesheet" href="~/css/ExternalStylesheet.css" asp-append-version="true" />
+
+    <style>
+        .home-hero-image {
+            width: 30%;
+            display: block;
+            margin: 0 auto 1.5rem auto;
+        }
+        .toggle-switch { cursor: pointer; }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sticky Points</h1>
+        <nav>
+            <a asp-controller="Home" asp-action="Index">Home</a>
+            <a asp-controller="Home" asp-action="Login">Login</a>
+            <a asp-controller="Home" asp-action="Signup">Sign Up</a>
+            <a asp-controller="Home" asp-action="TeacherDashboard">Teacher Dashboard</a>
+            <a asp-controller="Home" asp-action="StudentJoin">Student Join</a>
+            <a asp-controller="Home" asp-action="About">About Us</a>
+            <a asp-controller="Students" asp-action="Index">Students</a>
+            <a asp-controller="Account" asp-action="Index">User Account</a>
+            <a asp-controller="Session" asp-action="Index">Session Page</a>
+
+            <div id="themeToggle" onclick="toggleTheme()" class="toggle-switch">
+                <span class="icon-sun">☀</span>
+                <span class="icon-moon">🌙</span>
+            </div>
+        </nav>
+    </header>
+
+    
+    <div class="container">
+        @RenderBody()
+    </div>
+
+    
+    <footer>
+        <p>&copy; 2025 Sticky Points</p>
+        <p id="date-time"></p>
+    </footer>
+
+    <script src="~/js/app.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+
+</body>
+</html>

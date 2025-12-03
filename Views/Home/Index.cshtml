@@ -1,0 +1,33 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+
+<img src="~/images/logo.png" alt="Project Image" />
+
+<h2>Welcome to Sticky Points</h2>
+
+<p>
+    Sticky Points is a simple platform that helps teachers reward students
+    based on participation and performance.
+</p>
+
+<article>
+    <h3 id="benefits">Project Benefits</h3>
+    <ul>
+        <li>Encourages classroom engagement</li>
+        <li>Helps teachers manage groups</li>
+        <li>Tracks student performance</li>
+    </ul>
+</article>
+
+<a href="#benefits" style="color: #007bff; font-weight: 900; text-decoration: underline;">
+    Jump to Benefits
+</a>
+
+@if (ViewBag.LastVisit != null)
+{
+    <p style="color: gray; font-size: 14px;">
+        Last visit: @ViewBag.LastVisit
+    </p>
+}
