@@ -98,7 +98,7 @@ namespace StickyPointsMVC.Controllers
         [HttpPost]
         public IActionResult Signup(string name, int age, string email)
         {
-            // check if email already exists
+            
             var existingStudent = _context.Students.FirstOrDefault(s => s.Email == email);
 
             if (existingStudent != null)
