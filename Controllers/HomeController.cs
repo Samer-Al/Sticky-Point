@@ -19,10 +19,10 @@ namespace StickyPointsMVC.Controllers
         {
             CookieOptions options = new CookieOptions
             {
-                Expires = DateTime.Now.AddDays(15),   // Cookie expires in 15 days
-                HttpOnly = true,                      // Prevent JS access
-                Secure = true,                        // Only HTTPS
-                SameSite = SameSiteMode.Strict        // Prevent CSRF
+                Expires = DateTime.Now.AddDays(15),   
+                HttpOnly = true,                      
+                Secure = true,                        
+                SameSite = SameSiteMode.Strict        
             };
 
             Response.Cookies.Append(cookieName, cookieValue, options);
